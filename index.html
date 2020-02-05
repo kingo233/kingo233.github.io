@@ -319,22 +319,15 @@
 
       
         
-          
-            <p>CodeForces Educational Round 81 A题</p>
+          <p>CodeForces Educational Round 81 A题</p>
 <img src="/2020/02/04/Display-the-Number/1.png" class title="题干">
-<p>分析题意后，我们列出每个数字所耗的灯管数</p>
-<p>cost[10]={6,2,5,5,4,5,6,3,7,6}</p>
-<p>其中，cost[i]表示数字i耗费的灯管数</p>
-<p>我们对此进行一些分析，cost数组中，数字最小的是2，对应的数字是1。我们可以很明显地发现，对于耗费量$\geq4$的数字，我们用多个1，增加数字的位数，所造的数字就会比用这些性价比低的数字大。</p>
-<p>而对于数字7，它的耗费是3，当灯管数不足以点亮两个1时，点亮一个7成为了最佳的选择。</p>
-<p>于是现在只用考虑两个数字：1和7</p>
-<p>但是，会不会有数字位数耗尽而考虑其他数字的情况呢？</p>
-<p>这里要注意题干里第一句话的意思是最终数字的位数不能超过它，而不是大小不能超过它，结合数据范围，很稳了，不会有这种情况。</p>
-<p>再思考，数字7最多只能输出1个，因为如果能输出两个7的时候，耗费是6，不如3个1耗费6，因为$111 &gt; 77$</p>
-<p>怎么判断要不要输出7？要注意到这里的数据非常特殊，1的耗费是2，7的耗费是3，正好可以用N的奇偶性来做判断，偶数就全输出1，否则就先输出7，再输出若干个1</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e5</span>;</span><br><span class="line"><span class="keyword">int</span> cost[<span class="number">10</span>]=&#123;<span class="number">6</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">7</span>,<span class="number">6</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> costs[]=&#123;<span class="number">2</span>,<span class="number">3</span>&#125;;<span class="comment">//1,7</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">(<span class="keyword">int</span> sum)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(sum%<span class="number">2</span> ==<span class="number">0</span>)&#123;</span><br><span class="line">			<span class="keyword">int</span> len=sum/<span class="number">2</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"1"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"7"</span>);</span><br><span class="line">			<span class="keyword">int</span> len=sum/<span class="number">2</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;len<span class="number">-1</span>;i++)&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"1"</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t,sum;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;t;</span><br><span class="line">	<span class="keyword">while</span>(t--)&#123;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;sum;</span><br><span class="line">		func(sum);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/02/04/Display-the-Number/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
