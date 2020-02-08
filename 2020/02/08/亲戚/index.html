@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="题目背景若某个家族人员过于庞大，要判断两个是否是亲戚，确实还很不容易，现在给出某个亲戚关系图，求任意给出的两个人是否具有亲戚关系。 题目描述规定：x和y是亲戚，y和z是亲戚，那么x和z也是亲戚。如果x,y是亲戚，那么x的亲戚都是y的亲戚，y的亲戚也都是x的亲戚。 输入格式第一行：三个整数$n,m,p，（n\leq5000,m\leq5000,p\leq5000）$，分别表示有$n$个人，$m$个亲">
+<meta name="description" content="题目背景若某个家族人员过于庞大，要判断两个是否是亲戚，确实还很不容易，现在给出某个亲戚关系图，求任意给出的两个人是否具有亲戚关系。 题目描述规定：x和y是亲戚，y和z是亲戚，那么x和z也是亲戚。如果x,y是亲戚，那么x的亲戚都是y的亲戚，y的亲戚也都是x的亲戚。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="亲戚">
 <meta property="og:url" content="http://yoursite.com/2020/02/08/%E4%BA%B2%E6%88%9A/index.html">
 <meta property="og:site_name" content="江楠的blogs">
-<meta property="og:description" content="题目背景若某个家族人员过于庞大，要判断两个是否是亲戚，确实还很不容易，现在给出某个亲戚关系图，求任意给出的两个人是否具有亲戚关系。 题目描述规定：x和y是亲戚，y和z是亲戚，那么x和z也是亲戚。如果x,y是亲戚，那么x的亲戚都是y的亲戚，y的亲戚也都是x的亲戚。 输入格式第一行：三个整数$n,m,p，（n\leq5000,m\leq5000,p\leq5000）$，分别表示有$n$个人，$m$个亲">
+<meta property="og:description" content="题目背景若某个家族人员过于庞大，要判断两个是否是亲戚，确实还很不容易，现在给出某个亲戚关系图，求任意给出的两个人是否具有亲戚关系。 题目描述规定：x和y是亲戚，y和z是亲戚，那么x和z也是亲戚。如果x,y是亲戚，那么x的亲戚都是y的亲戚，y的亲戚也都是x的亲戚。">
 <meta property="article:published_time" content="2020-02-08T05:04:17.000Z">
-<meta property="article:modified_time" content="2020-02-08T05:19:34.529Z">
+<meta property="article:modified_time" content="2020-02-08T05:22:39.095Z">
 <meta property="article:author" content="Nan Jiang">
 <meta property="article:tag" content="数据结构">
 <meta property="article:tag" content="并查集">
@@ -335,6 +335,7 @@
       
         <h2 id="题目背景"><a href="#题目背景" class="headerlink" title="题目背景"></a>题目背景</h2><p>若某个家族人员过于庞大，要判断两个是否是亲戚，确实还很不容易，现在给出某个亲戚关系图，求任意给出的两个人是否具有亲戚关系。</p>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>规定：x和y是亲戚，y和z是亲戚，那么x和z也是亲戚。如果x,y是亲戚，那么x的亲戚都是y的亲戚，y的亲戚也都是x的亲戚。</p>
+ <a id="more"></a>
 <h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第一行：三个整数$n,m,p，（n\leq5000,m\leq5000,p\leq5000）$，分别表示有$n$个人，$m$个亲戚关系，询问$p$对亲戚关系。</p>
 <p>以下m行：每行两个数$M_i，M_j，1\leq M_i，M_j\leq N，$表示$M_i$与$M_j$具有亲戚关系。</p>
 <p>接下来p行：每行两个数$P_i$，$P_j$,询问$P_i$和$P_j$是否具有亲戚关系。</p>
