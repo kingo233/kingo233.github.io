@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="数论,逆元," />
 
 
 
@@ -79,13 +79,17 @@
 
 
 
+<meta name="description" content="现在小明所在的公司要将m个员工重新分成n组，组的编号从1到n，第i组分a[i]个人。为了征得大家同意，公司想要将所有的分组方案打印出来，请告诉该公司需要打印多少种方案。 注意：每组内部是没有顺序的。 输入格式:第一行，t。表示有t组测试数据。(t&lt;&#x3D;1000) 接下来每组数据内部 第一行，m，n。含义如上。(n&lt;&#x3D;1000,m&lt;&#x3D;100000) 第二行，n个数a[1],a[2],">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小明和他的公司">
-<meta property="og:url" content="http://yoursite.com/2020/04/22/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/index.html">
+<meta property="og:url" content="http://yoursite.com/2020/05/10/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/index.html">
 <meta property="og:site_name" content="TLE Assassinのblogs">
-<meta property="article:published_time" content="2020-04-22T15:24:17.000Z">
-<meta property="article:modified_time" content="2020-04-22T15:24:17.468Z">
+<meta property="og:description" content="现在小明所在的公司要将m个员工重新分成n组，组的编号从1到n，第i组分a[i]个人。为了征得大家同意，公司想要将所有的分组方案打印出来，请告诉该公司需要打印多少种方案。 注意：每组内部是没有顺序的。 输入格式:第一行，t。表示有t组测试数据。(t&lt;&#x3D;1000) 接下来每组数据内部 第一行，m，n。含义如上。(n&lt;&#x3D;1000,m&lt;&#x3D;100000) 第二行，n个数a[1],a[2],">
+<meta property="article:published_time" content="2020-05-10T13:24:17.000Z">
+<meta property="article:modified_time" content="2020-05-11T02:58:26.568Z">
 <meta property="article:author" content="TLE Assassin">
+<meta property="article:tag" content="数论">
+<meta property="article:tag" content="逆元">
 <meta name="twitter:card" content="summary">
 
 
@@ -116,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/04/22/小明和他的公司/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/05/10/小明和他的公司/"/>
 
 
 
@@ -239,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/22/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/10/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TLE Assassin">
@@ -268,8 +272,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-22T23:24:17+08:00">
-                2020-04-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-10T21:24:17+08:00">
+                2020-05-10
               </time>
             
 
@@ -287,9 +291,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/04/22/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/#comments" itemprop="discussionUrl">
+                <a href="/2020/05/10/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2020/04/22/小明和他的公司/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2020/05/10/小明和他的公司/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -297,7 +301,7 @@
 
           
           
-             <span id="/2020/04/22/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/" class="leancloud_visitors" data-flag-title="小明和他的公司">
+             <span id="/2020/05/10/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/" class="leancloud_visitors" data-flag-title="小明和他的公司">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -328,7 +332,26 @@
       
 
       
-        
+        <p>现在小明所在的公司要将m个员工重新分成n组，组的编号从1到n，第i组分a[i]个人。为了征得大家同意，公司想要将所有的分组方案打印出来，请告诉该公司需要打印多少种方案。</p>
+<p>注意：每组内部是没有顺序的。</p>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>第一行，t。表示有t组测试数据。(t&lt;=1000)</p>
+<p>接下来每组数据内部</p>
+<p>第一行，m，n。含义如上。(n&lt;=1000,m&lt;=100000)</p>
+<p>第二行，n个数a[1],a[2],a[3]…a[n]。含义如上。(1&lt;=a[i]&lt;=m，a[1]+a[2]+a[3]+…+a[n]=m)</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>t行，每行一个数，表示该组数据下的方案数（对998244353取模）。</p>
+<a id="more"></a>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">3 2</span><br><span class="line">2 1</span><br><span class="line">3 3</span><br><span class="line">1 1 1</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">6</span><br></pre></td></tr></table></figure>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>典型的组合问题，从$k$个人中分出$a[i]$个人，方案有$C^{a[i]}_k$种，只要把每个组合数求出来再相乘取模即可。但是这里很明显数据比较大，大数组合数取模就要使用逆元来处理了。下面来介绍逆元</p>
+<p>若$b\times c ==  1(mod p)$，则称$c$为$b$的逆元，有了逆元，我们可以把形如$(a/b) mod p$的问题转化为$(a\times c)mod p$的问题，在大数组合数中，$a/b$如果$b$比较大，那么就会出现精度不够的问题，需要我们用逆元处理</p>
+<p>逆元能够化除法为乘法的证明：<br>$(a/b)mod p =(a/b)bc mod p=(ac) mod  p \quad (b\times c ==  1(mod p))$ </p>
+<p>逆元的求解：</p>
+<p>$a\text{在mod p 下的逆元为}a^{p-2}$     其中，$a和p$互质</p>
+<p>证明需要用到费马小定理：$a^{p-1}==1 (mod p)$则</p>
+<p>$a a^{p-2}==1 (mod  p)$</p>
+<p>AC代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">const</span> ll maxn = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> ll mod = <span class="number">998244353</span>;</span><br><span class="line">ll fact[maxn];</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">qpow</span><span class="params">(ll x, ll p)</span> </span>&#123;</span><br><span class="line">    ll res = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span> (p) &#123;</span><br><span class="line">        <span class="keyword">if</span> (p &amp; <span class="number">1</span>) &#123;</span><br><span class="line">            res = res * x % mod;</span><br><span class="line">        &#125;</span><br><span class="line">        x = x * x % mod;</span><br><span class="line">        p &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">inv</span><span class="params">(ll x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> qpow(x, mod - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    fact[<span class="number">0</span>] = fact[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">    <span class="comment">//处理一下阶乘</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; maxn; i++) &#123;</span><br><span class="line">        fact[i] = fact[i - <span class="number">1</span>] * i % mod;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        ll n, m, a, ans = <span class="number">1</span>;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; m &gt;&gt; n;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="built_in">cin</span> &gt;&gt; a;</span><br><span class="line">            ll temp = fact[m] * inv(fact[a]) % mod * inv(fact[m - a]) % mod;</span><br><span class="line">            ans = ans * temp % mod;</span><br><span class="line">            m -= a;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -343,6 +366,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%95%B0%E8%AE%BA/" rel="tag"># 数论</a>
+          
+            <a href="/tags/%E9%80%86%E5%85%83/" rel="tag"># 逆元</a>
+          
+        </div>
+      
 
       
       
@@ -352,8 +383,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/22/%E4%BC%A0%E8%AF%9D%E7%9A%84%E9%9A%BE%E5%BA%A6/" rel="next" title="传话的难度">
-                <i class="fa fa-chevron-left"></i> 传话的难度
+              <a href="/2020/04/26/Constant-Palindrome-Sum/" rel="next" title="Constant Palindrome Sum">
+                <i class="fa fa-chevron-left"></i> Constant Palindrome Sum
               </a>
             
           </div>
@@ -361,10 +392,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/04/26/Constant-Palindrome-Sum/" rel="prev" title="Constant Palindrome Sum">
-                Constant Palindrome Sum <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -426,8 +453,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -455,7 +491,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -488,6 +524,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入格式"><span class="nav-number">1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出格式"><span class="nav-number">2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入样例"><span class="nav-number">3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出样例"><span class="nav-number">4.</span> <span class="nav-text">输出样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">5.</span> <span class="nav-text">思路</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -659,8 +711,8 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2020/04/22/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/';
-          this.page.identifier = '2020/04/22/小明和他的公司/';
+          this.page.url = 'http://yoursite.com/2020/05/10/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/';
+          this.page.identifier = '2020/05/10/小明和他的公司/';
           this.page.title = '小明和他的公司';
         };
         var d = document, s = d.createElement('script');
