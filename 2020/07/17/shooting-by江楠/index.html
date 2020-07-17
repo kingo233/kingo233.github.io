@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="CodeForces,差分," />
+  <meta name="keywords" content="基础编程能力,字符串," />
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="CodeForces Round # 636(div3)D题干You are given an array $a$ consisting of $n$ integers (it is guaranteed that $n$ is even, i.e. divisible by $2$). All $a_i$ does not exceed some integer $k$. Your task i">
+<meta name="description" content="B. Shooting The girl Kaguya is standing in a bar and starring at Miyuki. She wants to shoot Miyuki with her heart arrow but she needs to know the distance between them to make her shot accurate. The p">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Constant Palindrome Sum">
-<meta property="og:url" content="http://yoursite.com/2020/05/11/Constant-Palindrome-Sum/index.html">
+<meta property="og:title" content="shooting by江楠">
+<meta property="og:url" content="http://yoursite.com/2020/07/17/shooting-by%E6%B1%9F%E6%A5%A0/index.html">
 <meta property="og:site_name" content="TLE Assassinのblogs">
-<meta property="og:description" content="CodeForces Round # 636(div3)D题干You are given an array $a$ consisting of $n$ integers (it is guaranteed that $n$ is even, i.e. divisible by $2$). All $a_i$ does not exceed some integer $k$. Your task i">
-<meta property="article:published_time" content="2020-05-11T08:20:23.000Z">
-<meta property="article:modified_time" content="2020-05-11T08:40:44.189Z">
+<meta property="og:description" content="B. Shooting The girl Kaguya is standing in a bar and starring at Miyuki. She wants to shoot Miyuki with her heart arrow but she needs to know the distance between them to make her shot accurate. The p">
+<meta property="article:published_time" content="2020-07-17T13:26:20.000Z">
+<meta property="article:modified_time" content="2020-07-17T13:31:02.058Z">
 <meta property="article:author" content="TLE Assassin">
-<meta property="article:tag" content="CodeForces">
-<meta property="article:tag" content="差分">
+<meta property="article:tag" content="基础编程能力">
+<meta property="article:tag" content="字符串">
 <meta name="twitter:card" content="summary">
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/05/11/Constant-Palindrome-Sum/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/07/17/shooting-by江楠/"/>
 
 
 
 
 
-  <title>Constant Palindrome Sum | TLE Assassinのblogs</title>
+  <title>shooting by江楠 | TLE Assassinのblogs</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/11/Constant-Palindrome-Sum/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/17/shooting-by%E6%B1%9F%E6%A5%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TLE Assassin">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Constant Palindrome Sum</h1>
+          <h1 class="post-title" itemprop="name headline">shooting by江楠</h1>
         
 
         <div class="post-meta">
@@ -272,8 +272,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-11T16:20:23+08:00">
-                2020-05-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-17T21:26:20+08:00">
+                2020-07-17
               </time>
             
 
@@ -291,9 +291,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2020/05/11/Constant-Palindrome-Sum/#comments" itemprop="discussionUrl">
+                <a href="/2020/07/17/shooting-by%E6%B1%9F%E6%A5%A0/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2020/05/11/Constant-Palindrome-Sum/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2020/07/17/shooting-by江楠/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -301,7 +301,7 @@
 
           
           
-             <span id="/2020/05/11/Constant-Palindrome-Sum/" class="leancloud_visitors" data-flag-title="Constant Palindrome Sum">
+             <span id="/2020/07/17/shooting-by%E6%B1%9F%E6%A5%A0/" class="leancloud_visitors" data-flag-title="shooting by江楠">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -332,46 +332,20 @@
       
 
       
-        <h2 id="CodeForces-Round-636-div3-D"><a href="#CodeForces-Round-636-div3-D" class="headerlink" title="CodeForces Round # 636(div3)D"></a>CodeForces Round # 636(div3)D</h2><h3 id="题干"><a href="#题干" class="headerlink" title="题干"></a>题干</h3><p>You are given an array $a$ consisting of $n$ integers (it is guaranteed that $n$ is even, i.e. divisible by $2$). All $a_i$ does not exceed some integer $k$.</p>
-<p>Your task is to replace the <strong>minimum</strong> number of elements (replacement is the following operation: choose some index $i$ from $1$ to $n$ and replace $a_i$with some integer in range $[1,k]$) to satisfy the following conditions:</p>
-<ul>
-<li>after all replacements, all $a_i$are positive integers not greater than $k$;</li>
-<li>for all $i$ from $1$ to $\frac{n}{2}$ the following equation is true: $a_i+a_{n−i+1}=x$, where $x$ should be <strong>the same</strong> for all $\frac {n}{2}$ pairs of elements.</li>
-</ul>
-<p>You have to answer $t$ independent test cases.</p>
-<p>Input</p>
-<p>The first line of the input contains one integer $t(1≤t≤10^4)$ — the number of test cases. Then $t$ test cases follow.</p>
-<p>The first line of the test case contains two integers $n$ and $k (2≤n≤2⋅10^5,1≤k≤2⋅10^5)$ — the length of aa and the maximum possible value of some aiai correspondingly. It is guratanteed that $n$ is even (i.e. divisible by 2). The second line of the test case contains nn integers $a_1,a_2,…,a_n (1≤a_i≤k)$, where aiai is the $i$-th element of $a$.</p>
-<p>It is guaranteed that the sum of $n$ (as well as the sum of $k$) over all test cases does not exceed $2⋅10^5 (∑n≤2⋅10^5, ∑k≤2⋅10^5).$</p>
+        <p>B. Shooting</p>
+<p>The girl Kaguya is standing in a bar and starring at Miyuki. She wants to shoot Miyuki with her heart arrow but she needs to know the distance between them to make her shot accurate.</p>
+<p>The problem is that she wrote it in scientific notation. The scientific notation of some real number <em>x</em> is the notation of form <em>A<strong>e</strong>B</em>, where <em>A</em> is a real number and <em>B</em> is an integer and <em>x</em>=<em>A</em>∗10<em>B</em> is true. In our case <em>A</em> is between 0 and 9 and <em>B</em> is non-negative.</p>
+<p>So she asked you to tell her the distance value in usual decimal representation with minimal number of digits after the decimal point (and no decimal point if it is an integer). See the output format for better understanding.</p>
 <a id="more"></a>
-<p>Output</p>
-<p>For each test case, print the answer — the <strong>minimum</strong> number of elements you have to replace in aa to satisfy the conditions from the problem statement.</p>
-<h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>给定一个长度为 n 的数列，n 为偶数，保证每个元素在 [ 1 , k ] 之间</p>
-<p>每次操作可以把某个位置的数字变成 [ 1 , k ] 内的任意数字</p>
-<p>要求让这个数列满足：对于所有的 i ∈ [ 1 , n/2 ]，a[i] + a[n-i+1] 是一个定值</p>
-<p>问最少的操作次数</p>
-<h3 id="前置知识"><a href="#前置知识" class="headerlink" title="前置知识"></a>前置知识</h3><p>我们使用差分数组d[i]来维护把每组数字之和调整为 i 所需最少的调整次数。注意这个意义是在对差分数组完成前缀和操作之后才有的。在此之前，为了快速维护区间，d[i]的值意义就不是这个。</p>
-<p>下面介绍差分数组</p>
-<p>差分数组就是对操作区间的端点操作来代表对整个区间的操作。假如对[a,b]区间加1，反应到差分数组就是</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d[a]++;</span><br><span class="line">d[b+<span class="number">1</span>]--;</span><br></pre></td></tr></table></figure>
-<p>举个例子：假如差分数组为d[6]={0}；我们想对区间[1,3]加1，则有</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d[1]++;</span><br><span class="line">d[4]--;</span><br></pre></td></tr></table></figure>
-<p>则有d[0]=0,d[1]=1,d[2]=0,d[3]=0,d[4]=-1,d[5]=0</p>
-<p>当我们对差分数组的操作都做完了，想看单点的值时，差分数组总是配合前缀和来使用求单点的值</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">    d[i]+=d[i<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>则d[0]=0,d[1]=1,d[2]=1,d[3]=1,d[4]=0,d[5]=0</p>
-<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>每次取一组 a[i] 和 a[n-i+1] 处理</p>
-<p>令 <code>sum = a[i]+a[n-i+1] , maxn=max(a[i],a[n-i+1]) , minn=min(a[i],a[n-i+1])</code></p>
-<p>分类讨论得到：</p>
-<p>　　一、如果定值 x 在 <strong>[2,minn]</strong> 之间，即使将较大的数更改为1后，和也是大于x，说明此时这两个数都需要更改，所以这段区间的操作数+2</p>
-<p>　　二、如果定值 x 在 <strong>[maxn+k+1,2*k]</strong> 之间，即使将较小的数更改为k后，和也是小于x，说明此时这两个数都需要更改，所以这段区间的操作数+2</p>
-<p>　　三、如果定值 x 在 <strong>[minn+1,maxn+k]</strong> 之间且<strong>不等于 sum</strong>，能够做到只改变其中一个数就使得和等于x，所以这个范围内操作数+1</p>
-<p>　　四、特殊处理，如果定值 x <strong>等于 sum</strong>，不需要更改任何一个数，所以这个点的操作数不需要增加</p>
-<p>综上，对于差分数组的标记，我们可以得到：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">delta[2]+&#x3D;2;</span><br><span class="line">delta[minn+1]-&#x3D;2;</span><br><span class="line">&#x2F;&#x2F;讨论 1</span><br><span class="line">delta[maxn+k+1]+&#x3D;2;</span><br><span class="line">delta[2*k+1]-&#x3D;2;</span><br><span class="line">&#x2F;&#x2F;讨论 2</span><br><span class="line">delta[minn+1]++;</span><br><span class="line">delta[maxn+k+1]--;</span><br><span class="line">delta[sum]--;</span><br><span class="line">delta[sum+1]++;&#x2F;&#x2F;因为上面两步把sum位置加上了1，所以这里减去1</span><br><span class="line">&#x2F;&#x2F;讨论 3、4</span><br></pre></td></tr></table></figure>
-<p>差分数组的标记原理为：如果要让区间 [l,r] 内每个元素加上 x ，则 delta[l]+=x , delta[r+1]-=x ，最后遍历从前往后依次加上前一个数作为答案</p>
-<p>下面是AC代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> ar[<span class="number">200050</span>], delta[<span class="number">400050</span>]; <span class="comment">//差分数组开2*k的空间</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, k, sum, minn, maxn, ans;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="built_in">memset</span>(delta, <span class="number">0</span>, (<span class="number">2</span> * k + <span class="number">10</span>) * <span class="keyword">sizeof</span>(<span class="keyword">int</span>)); <span class="comment">//初始化到2*k即可（稍大）</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i  &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cin</span> &gt;&gt; ar[i];</span><br><span class="line">        <span class="keyword">if</span> (i &gt; n / <span class="number">2</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            sum = ar[i] + ar[n - i + <span class="number">1</span>];</span><br><span class="line">            minn = <span class="built_in">min</span>(ar[i], ar[n - i + <span class="number">1</span>]);</span><br><span class="line">            maxn = sum - minn;</span><br><span class="line"></span><br><span class="line">            delta[<span class="number">2</span>] += <span class="number">2</span>;</span><br><span class="line">            delta[minn + <span class="number">1</span>] -= <span class="number">2</span>;</span><br><span class="line">            <span class="comment">//讨论 1</span></span><br><span class="line">            delta[maxn + k + <span class="number">1</span>] += <span class="number">2</span>;</span><br><span class="line">            delta[<span class="number">2</span> * k + <span class="number">1</span>] -= <span class="number">2</span>;</span><br><span class="line">            <span class="comment">//讨论 2</span></span><br><span class="line">            delta[minn + <span class="number">1</span>]++;</span><br><span class="line">            delta[maxn + k + <span class="number">1</span>]--;</span><br><span class="line">            delta[sum]--;</span><br><span class="line">            delta[sum + <span class="number">1</span>]++;<span class="comment">//因为上面两步把sum位置加上了1，所以这里减去1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ans = delta[<span class="number">2</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i  &lt;= <span class="number">2</span> * k; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        delta[i] += delta[i - <span class="number">1</span>];</span><br><span class="line">        ans = <span class="built_in">min</span>(delta[i], ans);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>); <span class="built_in">cout</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">    <span class="keyword">while</span> (t--) &#123;</span><br><span class="line">        solve();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h3><p>There are multiple test cases. The first line of input contains an integer T indicating the number of test cases (1≤<em>T</em>≤10). Each test case contains only one line of a single string of form <em>a</em>.<em>d<strong>e</strong>b</em> where <em>a</em>, <em>d</em> and <em>b</em> are integers and <em>e</em> is usual character ‘e’ (0≤<em>a</em>≤9, 0≤<em>d</em>≤10100, 0≤<em>b</em>≤100) — the scientific notation of the desired distance value.</p>
+<p><em>a</em> and <em>b</em> contain no leading zeros and <em>d</em> contains no trailing zeros (but may be equal to 0). Also, <em>b</em> can not be non-zero if <em>a</em> is zero.</p>
+<h3 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式:"></a>输出格式:</h3><p>For each test case print the real number <em>x</em> (the desired distance value) in a single line in its decimal notation.</p>
+<p>Thus if <em>x</em> is an integer, print it’s integer value without decimal part and decimal point and without leading zeroes.</p>
+<p>Otherwise print <em>x</em> in a form of <em>p</em>.<em>q</em> such that <em>p</em> is an integer that have no leading zeroes (but may be equal to zero), and <em>q</em> is an integer that have no trailing zeroes (and may not be equal to zero).</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例:"></a>输入样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">8.549e2</span><br><span class="line">8.549e3</span><br><span class="line">0.33e0</span><br></pre></td></tr></table></figure>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例:"></a>输出样例:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">854.9</span><br><span class="line">8549</span><br><span class="line">0.33</span><br></pre></td></tr></table></figure>
+<p>这道字符串题主要难点还是在怎么处理整数和小数，小数的后缀零怎么去。整数和小数的前缀零怎么去。同时这里还有比较复杂的特殊情况需要处理。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//去掉前导0</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">qiandao</span><span class="params">(<span class="built_in">string</span>&amp; s)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> pos = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; s[i]; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] == <span class="string">'0'</span>)pos = i;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (~pos)s.erase(<span class="number">0</span>, pos);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//去掉后缀0</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">houdao</span><span class="params">(<span class="built_in">string</span>&amp; s)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> pos = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = s.length() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] == <span class="string">'0'</span>)pos = i;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (~pos)s.erase(pos);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//判断是否全为0</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">iszero</span><span class="params">(<span class="built_in">string</span>&amp; s)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; s[i]; i++) &#123;</span><br><span class="line">		<span class="keyword">if</span> (s[i] != <span class="string">'0'</span>)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">func</span><span class="params">(<span class="built_in">string</span> qian, <span class="built_in">string</span> hou, <span class="keyword">int</span> e)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">string</span> ans = qian;</span><br><span class="line">	<span class="keyword">if</span> (hou.length() == e) &#123;</span><br><span class="line">		ans = ans + hou;</span><br><span class="line">		qiandao(ans);</span><br><span class="line">		<span class="keyword">if</span> (ans.length() == <span class="number">0</span> || iszero(ans))ans = <span class="string">"0"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (hou.length() &gt; e) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e; i++) &#123;</span><br><span class="line">			ans = ans + hou[i];</span><br><span class="line">		&#125;</span><br><span class="line">		qiandao(ans);</span><br><span class="line">		hou.erase(<span class="number">0</span>, e);</span><br><span class="line">		houdao(hou);</span><br><span class="line">		<span class="keyword">if</span> (hou.length() == <span class="number">0</span> || iszero(hou));</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			ans = ans + <span class="string">'.'</span>;</span><br><span class="line">			ans = ans + hou;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		e -= hou.length();</span><br><span class="line">		ans = ans + hou;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e; i++) &#123;</span><br><span class="line">			ans = ans + <span class="string">'0'</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		qiandao(ans);</span><br><span class="line">		<span class="keyword">if</span> (ans.length() == <span class="number">0</span> || iszero(ans))ans = <span class="string">"0"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> t;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; t;</span><br><span class="line">	<span class="keyword">while</span> (t--) &#123;</span><br><span class="line">		<span class="built_in">string</span> s;</span><br><span class="line">		<span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line">		<span class="keyword">int</span> dpos = s.<span class="built_in">find</span>(<span class="string">'.'</span>);</span><br><span class="line">		<span class="keyword">int</span> epos = s.<span class="built_in">find</span>(<span class="string">'e'</span>);</span><br><span class="line">		<span class="keyword">int</span> zhishu = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = epos + <span class="number">1</span>; s[i]; i++) &#123;</span><br><span class="line">			zhishu *= <span class="number">10</span>;</span><br><span class="line">			zhishu += s[i] - <span class="string">'0'</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">string</span> qian = s.substr(<span class="number">0</span>, dpos);</span><br><span class="line">		<span class="built_in">string</span> hou = s.substr(dpos + <span class="number">1</span>, epos - dpos<span class="number">-1</span>);</span><br><span class="line">		<span class="built_in">string</span> ans = func(qian, hou, zhishu);</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; ans &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -389,9 +363,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CodeForces/" rel="tag"># CodeForces</a>
+            <a href="/tags/%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E8%83%BD%E5%8A%9B/" rel="tag"># 基础编程能力</a>
           
-            <a href="/tags/%E5%B7%AE%E5%88%86/" rel="tag"># 差分</a>
+            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/" rel="tag"># 字符串</a>
           
         </div>
       
@@ -404,8 +378,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/05/10/%E5%B0%8F%E6%98%8E%E5%92%8C%E4%BB%96%E7%9A%84%E5%85%AC%E5%8F%B8/" rel="next" title="小明和他的公司">
-                <i class="fa fa-chevron-left"></i> 小明和他的公司
+              <a href="/2020/07/17/Prince-and-Princess-by%E6%BB%95%E7%BF%A1/" rel="next" title="Prince and Princess by滕翡">
+                <i class="fa fa-chevron-left"></i> Prince and Princess by滕翡
               </a>
             
           </div>
@@ -413,10 +387,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/05/13/%E6%8E%92%E5%88%97%E8%AE%A1%E7%AE%97-by%E6%BB%95%E7%BF%A1/" rel="prev" title="排列计算 by滕翡">
-                排列计算 by滕翡 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -559,7 +529,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CodeForces-Round-636-div3-D"><span class="nav-number">1.</span> <span class="nav-text">CodeForces Round # 636(div3)D</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题干"><span class="nav-number">1.1.</span> <span class="nav-text">题干</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题意"><span class="nav-number">1.2.</span> <span class="nav-text">题意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前置知识"><span class="nav-number">1.3.</span> <span class="nav-text">前置知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">1.4.</span> <span class="nav-text">思路</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#输入格式"><span class="nav-number">1.</span> <span class="nav-text">输入格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出格式"><span class="nav-number">2.</span> <span class="nav-text">输出格式:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入样例"><span class="nav-number">3.</span> <span class="nav-text">输入样例:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输出样例"><span class="nav-number">4.</span> <span class="nav-text">输出样例:</span></a></li></ol></div>
             
 
           </div>
@@ -736,9 +706,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2020/05/11/Constant-Palindrome-Sum/';
-          this.page.identifier = '2020/05/11/Constant-Palindrome-Sum/';
-          this.page.title = 'Constant Palindrome Sum';
+          this.page.url = 'http://yoursite.com/2020/07/17/shooting-by%E6%B1%9F%E6%A5%A0/';
+          this.page.identifier = '2020/07/17/shooting-by江楠/';
+          this.page.title = 'shooting by江楠';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://.disqus.com/embed.js';
