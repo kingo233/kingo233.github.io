@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="离散化,数位dp," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="I. Powerful NumbersVolodya always has a passion for math and numbers. And it seems to him that a integer number is powerful only when it is positive and divisible by each of its nonzero digits. He is">
+<meta property="og:type" content="article">
+<meta property="og:title" content="powerful numbers by滕翡">
+<meta property="og:url" content="http://yoursite.com/2020/07/21/powerful-numbers-by%E6%BB%95%E7%BF%A1/index.html">
+<meta property="og:site_name" content="TLE Assassinのblogs">
+<meta property="og:description" content="I. Powerful NumbersVolodya always has a passion for math and numbers. And it seems to him that a integer number is powerful only when it is positive and divisible by each of its nonzero digits. He is">
+<meta property="article:published_time" content="2020-07-21T07:42:29.000Z">
+<meta property="article:modified_time" content="2020-07-21T07:44:35.887Z">
+<meta property="article:author" content="TLE Assassin">
+<meta property="article:tag" content="离散化">
+<meta property="article:tag" content="数位dp">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/07/21/powerful-numbers-by滕翡/"/>
+
+
+
+
+
+  <title>powerful numbers by滕翡 | TLE Assassinのblogs</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">TLE Assassinのblogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/21/powerful-numbers-by%E6%BB%95%E7%BF%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TLE Assassin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TLE Assassinのblogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">powerful numbers by滕翡</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-21T15:42:29+08:00">
+                2020-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/07/21/powerful-numbers-by%E6%BB%95%E7%BF%A1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2020/07/21/powerful-numbers-by滕翡/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/07/21/powerful-numbers-by%E6%BB%95%E7%BF%A1/" class="leancloud_visitors" data-flag-title="powerful numbers by滕翡">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="I-Powerful-Numbers"><a href="#I-Powerful-Numbers" class="headerlink" title="I. Powerful Numbers"></a>I. Powerful Numbers</h1><p>Volodya always has a passion for math and numbers. And it seems to him that a integer number is powerful only when it is positive and divisible by each of its nonzero digits. He is eagerly to count the quantity of the powerful numbers in the given interval <a href="both inclusive"><em>a</em>,<em>b</em></a>. Can you help him?</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>The first line contains one integer <em>n</em> (1≤<em>n</em>≤10) which is the number of queries. Then <em>n</em> lines follow, each line contains two integers <em>a</em> and <em>b</em> (1≤<em>a</em>≤<em>b</em>≤$9∗10^{18}$)</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>Your answer should contains t numbers - answers to the queries, one number per line which is the number of powerful numbers for each given interval [a, b].</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1 9</span><br><span class="line">12 15</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="题意分析："><a href="#题意分析：" class="headerlink" title="题意分析："></a>题意分析：</h3><p>大意是寻找在区间[a，b]内能被自身每一个非零数位整除的数字个数m。可以转而思考强力数字是自己各个位数上的数字的公倍数，而lcm（1，2，3，4，5，6，7，8，9）=2520， 因此强力数字各位的lcm会是2520的一个因子。因此存储数字的时候就可以存储$num$%2520来减少空间消耗，同时九个数字任意组合的lcm共有48个（程序求得），因此使用$dp$$[数位][截止当前数位的lcm][当前数mod2520]$来存储状态。</p>
+<a id="more"></a>
+<h3 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> MOD = <span class="number">2520</span>;</span><br><span class="line">LL dp[<span class="number">20</span>][<span class="number">50</span>][<span class="number">2550</span>];</span><br><span class="line"><span class="keyword">int</span> dis[<span class="number">20</span>];<span class="comment">//数位 </span></span><br><span class="line"><span class="keyword">int</span> Hash[<span class="number">2550</span>];<span class="comment">//离散化数组 </span></span><br><span class="line"><span class="function">LL <span class="title">gcd</span><span class="params">(LL a, LL b)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> b ? gcd(b, a%b) : a; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">LL <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> len, <span class="keyword">int</span> num, <span class="keyword">int</span> lcm, <span class="keyword">bool</span> flag)</span> </span>&#123;</span><br><span class="line"> 	<span class="keyword">if</span> (<span class="number">-1</span> == len) <span class="keyword">return</span> num % lcm == <span class="number">0</span>;<span class="comment">//最后一位只有一个数字，因此只有一步操作，同时跳出函数 </span></span><br><span class="line"> 	<span class="keyword">if</span> (flag == <span class="number">0</span> &amp;&amp; ~dp[len][Hash[lcm]][num]) <span class="keyword">return</span> dp[len][Hash[lcm]][num];<span class="comment">//当dp数组不为空同时未到达在上界时 ，调用记忆化操作</span></span><br><span class="line"> 	LL ans = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"> 	<span class="keyword">int</span> <span class="built_in">end</span> = flag ? dis[len] : <span class="number">9</span>;</span><br><span class="line"> 	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= <span class="built_in">end</span>; i++)</span><br><span class="line"> 		ans += dfs(len - <span class="number">1</span>, (num * <span class="number">10</span> + i) % MOD<span class="comment">/*当前数位数字*/</span>, i ? lcm * i / gcd(lcm, i) : lcm<span class="comment">/*当前lcd*/</span>, flag&amp;&amp;i == <span class="built_in">end</span><span class="comment">/*在不超过上界同时i走到尾时为真*/</span>);</span><br><span class="line"> 	<span class="keyword">if</span> (flag == <span class="number">0</span>) dp[len][Hash[lcm]][num] = ans;<span class="comment">//记忆操作</span></span><br><span class="line"> 	<span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">LL <span class="title">solve</span><span class="params">(LL n)</span> </span>&#123;</span><br><span class="line"> 	<span class="keyword">int</span> pos = <span class="number">0</span>;</span><br><span class="line"> 	<span class="keyword">while</span> (n)</span><br><span class="line"> 	&#123;</span><br><span class="line"> 		dis[pos++] = n % <span class="number">10</span>;</span><br><span class="line"> 		n /= <span class="number">10</span>;</span><br><span class="line"> 	&#125;</span><br><span class="line"> 	<span class="keyword">return</span> dfs(pos - <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> 	<span class="keyword">int</span> T;</span><br><span class="line"> 	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;T);</span><br><span class="line"> 	<span class="keyword">int</span> cnt = <span class="number">0</span>;</span><br><span class="line"> 	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= MOD; i++)</span><br><span class="line"> 		<span class="keyword">if</span> (MOD%i == <span class="number">0</span>)</span><br><span class="line"> 			Hash[i] = cnt++;</span><br><span class="line"> 	<span class="comment">//离散化 </span></span><br><span class="line"> 	<span class="built_in">memset</span>(dp, <span class="number">-1</span>, <span class="keyword">sizeof</span>(dp));</span><br><span class="line"> 	<span class="keyword">while</span> (T--)</span><br><span class="line"> 	&#123;</span><br><span class="line"> 		<span class="keyword">long</span> <span class="keyword">long</span> l, r;</span><br><span class="line"> 		<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>, &amp;l, &amp;r);</span><br><span class="line"> 		<span class="built_in">printf</span>(<span class="string">"%lld\n"</span>, solve(r) - solve(l - <span class="number">1</span>));</span><br><span class="line"> 	&#125;</span><br><span class="line"> 	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>附数位dp模板</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">int</span> a[<span class="number">20</span>];</span><br><span class="line">ll dp[<span class="number">20</span>][state];<span class="comment">//不同题目状态不同</span></span><br><span class="line"><span class="function">ll <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> pos,<span class="comment">/*state变量*/</span>,<span class="keyword">bool</span> lead<span class="comment">/*前导零*/</span>,<span class="keyword">bool</span> limit<span class="comment">/*数位上界变量*/</span>)</span><span class="comment">//不是每个题都要判断前导零</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//递归边界，既然是按位枚举，最低位是0，那么pos==-1说明这个数我枚举完了</span></span><br><span class="line">    <span class="keyword">if</span>(pos==<span class="number">-1</span>) <span class="keyword">return</span> <span class="number">1</span>;<span class="comment">/*这里一般返回1，表示你枚举的这个数是合法的，那么这里就需要你在枚举时必须每一位都要满足题目条件，也就是说当前枚举到pos位，一定要保证前面已经枚举的数位是合法的。不过具体题目不同或者写法不同的话不一定要返回1 */</span></span><br><span class="line">    <span class="comment">//第二个就是记忆化(在此前可能不同题目还能有一些剪枝)</span></span><br><span class="line">    <span class="keyword">if</span>(!limit &amp;&amp; !lead &amp;&amp; dp[pos][state]!=<span class="number">-1</span>) <span class="keyword">return</span> dp[pos][state];</span><br><span class="line">    <span class="comment">/*常规写法都是在没有限制的条件记忆化，这里与下面记录状态是对应，具体为什么是有条件的记忆化后面会讲*/</span></span><br><span class="line">    <span class="keyword">int</span> up=limit?a[pos]:<span class="number">9</span>;<span class="comment">//根据limit判断枚举的上界up;这个的例子前面用213讲过了</span></span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    <span class="comment">//开始计数</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=up;i++)<span class="comment">//枚举，然后把不同情况的个数加到ans就可以了</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>() ...</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>()...</span><br><span class="line">        ans+=dfs(pos<span class="number">-1</span>,<span class="comment">/*状态转移*/</span>,lead &amp;&amp; i==<span class="number">0</span>,limit &amp;&amp; i==a[pos]) <span class="comment">//最后两个变量传参都是这样写的</span></span><br><span class="line">        <span class="comment">/*这里还算比较灵活，不过做几个题就觉得这里也是套路了</span></span><br><span class="line"><span class="comment">        大概就是说，我当前数位枚举的数是i，然后根据题目的约束条件分类讨论</span></span><br><span class="line"><span class="comment">        去计算不同情况下的个数，还有要根据state变量来保证i的合法性，比如题目</span></span><br><span class="line"><span class="comment">        要求数位上不能有62连续出现,那么就是state就是要保存前一位pre,然后分类，</span></span><br><span class="line"><span class="comment">        前一位如果是6那么这意味就不能是2，这里一定要保存枚举的这个数是合法*/</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//计算完，记录状态</span></span><br><span class="line">    <span class="keyword">if</span>(!limit &amp;&amp; !lead) dp[pos][state]=ans;</span><br><span class="line">    <span class="comment">/*这里对应上面的记忆化，在一定条件下时记录，保证一致性，当然如果约束条件不需要考虑lead，这里就是lead就完全不用考虑了*/</span></span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">ll <span class="title">solve</span><span class="params">(ll x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pos=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(x)<span class="comment">//把数位都分解出来</span></span><br><span class="line">    &#123;</span><br><span class="line">        a[pos++]=x%<span class="number">10</span>;<span class="comment">//个人老是喜欢编号为[0,pos),看不惯的就按自己习惯来，反正注意数位边界就行</span></span><br><span class="line">        x/=<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dfs(pos<span class="number">-1</span><span class="comment">/*从最高位开始枚举*/</span>,<span class="comment">/*一系列状态 */</span>,<span class="literal">true</span>,<span class="literal">true</span>);<span class="comment">//刚开始最高位都是有限制并且有前导零的，显然比最高位还要高的一位视为0嘛</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll le,ri;</span><br><span class="line">    <span class="keyword">while</span>(~<span class="built_in">scanf</span>(<span class="string">"%lld%lld"</span>,&amp;le,&amp;ri))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//初始化dp数组为-1,这里还有更加优美的优化,后面讲</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,solve(ri)-solve(le<span class="number">-1</span>));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E7%A6%BB%E6%95%A3%E5%8C%96/" rel="tag"># 离散化</a>
+          
+            <a href="/tags/%E6%95%B0%E4%BD%8Ddp/" rel="tag"># 数位dp</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/07/21/powerful-numbers-by%E5%88%98%E4%B8%B0%E7%9D%BF/" rel="next" title="powerful numbers by刘丰睿">
+                <i class="fa fa-chevron-left"></i> powerful numbers by刘丰睿
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/07/21/powerful-numbers-by%E6%B1%9F%E6%A5%A0/" rel="prev" title="powerful numbers by江楠">
+                powerful numbers by江楠 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">TLE Assassin</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="kingo233@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#I-Powerful-Numbers"><span class="nav-number">1.</span> <span class="nav-text">I. Powerful Numbers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Input-Specification"><span class="nav-number">1.0.1.</span> <span class="nav-text">Input Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Output-Specification"><span class="nav-number">1.0.2.</span> <span class="nav-text">Output Specification:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Input"><span class="nav-number">1.0.3.</span> <span class="nav-text">Sample Input:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sample-Output"><span class="nav-number">1.0.4.</span> <span class="nav-text">Sample Output:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题意分析："><span class="nav-number">1.0.5.</span> <span class="nav-text">题意分析：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现："><span class="nav-number">1.0.6.</span> <span class="nav-text">代码实现：</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TLE Assassin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2020/07/21/powerful-numbers-by%E6%BB%95%E7%BF%A1/';
+          this.page.identifier = '2020/07/21/powerful-numbers-by滕翡/';
+          this.page.title = 'powerful numbers by滕翡';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'NtlJh2Vzjn068FbhFrLqTi3e-gzGzoHsz',
+        appKey: 'X9LHUyllWrzG1h8jkE2698pY',
+        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("NtlJh2Vzjn068FbhFrLqTi3e-gzGzoHsz", "X9LHUyllWrzG1h8jkE2698pY");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

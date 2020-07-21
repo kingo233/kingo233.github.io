@@ -238,6 +238,460 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/21/powerful-numbers-by%E6%B1%9F%E6%A5%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TLE Assassin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TLE Assassinのblogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/21/powerful-numbers-by%E6%B1%9F%E6%A5%A0/" itemprop="url">powerful numbers by江楠</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-21T15:45:29+08:00">
+                2020-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/07/21/powerful-numbers-by%E6%B1%9F%E6%A5%A0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2020/07/21/powerful-numbers-by江楠/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/07/21/powerful-numbers-by%E6%B1%9F%E6%A5%A0/" class="leancloud_visitors" data-flag-title="powerful numbers by江楠">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="I-Powerful-Numbers"><a href="#I-Powerful-Numbers" class="headerlink" title="I. Powerful Numbers"></a>I. Powerful Numbers</h1><p>Volodya always has a passion for math and numbers. And it seems to him that a integer number is powerful only when it is positive and divisible by each of its nonzero digits. He is eagerly to count the quantity of the powerful numbers in the given interval <a href="both inclusive"><em>a</em>,<em>b</em></a>. Can you help him?</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>The first line contains one integer <em>n</em> (1≤<em>n</em>≤10) which is the number of queries. Then <em>n</em> lines follow, each line contains two integers <em>a</em> and <em>b</em> (1≤<em>a</em>≤<em>b</em>≤$9∗10^{18}$)</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>Your answer should contains t numbers - answers to the queries, one number per line which is the number of powerful numbers for each given interval [a, b].</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1 9</span><br><span class="line">12 15</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="题意分析："><a href="#题意分析：" class="headerlink" title="题意分析："></a>题意分析：</h3><p>设一个数的各个数位为abcde….求满足abcdefg % lcm(a,b,c,d,e,f,g) == 0在指定区间内的数目</p>
+<p>这道题是个数位dp,所谓数位dp，就是借助dfs和记忆化（可能还有剪枝操作）来完成对某种性质的数的计数。这道题用了很多技巧，如离散化节约空间，对2520的取模节约空间，需要一定的思维。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/21/powerful-numbers-by%E6%B1%9F%E6%A5%A0/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/21/powerful-numbers-by%E6%BB%95%E7%BF%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TLE Assassin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TLE Assassinのblogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/21/powerful-numbers-by%E6%BB%95%E7%BF%A1/" itemprop="url">powerful numbers by滕翡</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-21T15:42:29+08:00">
+                2020-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/07/21/powerful-numbers-by%E6%BB%95%E7%BF%A1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2020/07/21/powerful-numbers-by滕翡/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/07/21/powerful-numbers-by%E6%BB%95%E7%BF%A1/" class="leancloud_visitors" data-flag-title="powerful numbers by滕翡">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="I-Powerful-Numbers"><a href="#I-Powerful-Numbers" class="headerlink" title="I. Powerful Numbers"></a>I. Powerful Numbers</h1><p>Volodya always has a passion for math and numbers. And it seems to him that a integer number is powerful only when it is positive and divisible by each of its nonzero digits. He is eagerly to count the quantity of the powerful numbers in the given interval <a href="both inclusive"><em>a</em>,<em>b</em></a>. Can you help him?</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>The first line contains one integer <em>n</em> (1≤<em>n</em>≤10) which is the number of queries. Then <em>n</em> lines follow, each line contains two integers <em>a</em> and <em>b</em> (1≤<em>a</em>≤<em>b</em>≤$9∗10^{18}$)</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>Your answer should contains t numbers - answers to the queries, one number per line which is the number of powerful numbers for each given interval [a, b].</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1 9</span><br><span class="line">12 15</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<h3 id="题意分析："><a href="#题意分析：" class="headerlink" title="题意分析："></a>题意分析：</h3><p>大意是寻找在区间[a，b]内能被自身每一个非零数位整除的数字个数m。可以转而思考强力数字是自己各个位数上的数字的公倍数，而lcm（1，2，3，4，5，6，7，8，9）=2520， 因此强力数字各位的lcm会是2520的一个因子。因此存储数字的时候就可以存储$num$%2520来减少空间消耗，同时九个数字任意组合的lcm共有48个（程序求得），因此使用$dp$$[数位][截止当前数位的lcm][当前数mod2520]$来存储状态。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/21/powerful-numbers-by%E6%BB%95%E7%BF%A1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/21/powerful-numbers-by%E5%88%98%E4%B8%B0%E7%9D%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TLE Assassin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TLE Assassinのblogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/07/21/powerful-numbers-by%E5%88%98%E4%B8%B0%E7%9D%BF/" itemprop="url">powerful numbers by刘丰睿</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-21T15:40:30+08:00">
+                2020-07-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/07/21/powerful-numbers-by%E5%88%98%E4%B8%B0%E7%9D%BF/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2020/07/21/powerful-numbers-by刘丰睿/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/07/21/powerful-numbers-by%E5%88%98%E4%B8%B0%E7%9D%BF/" class="leancloud_visitors" data-flag-title="powerful numbers by刘丰睿">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Volodya always has a passion for math and numbers. And it seems to him that a integer number is powerful only when it is positive and divisible by each of its nonzero digits. He is eagerly to count the quantity of the powerful numbers in the given interval <a href="both inclusive"><em>a</em>,<em>b</em></a>. Can you help him?</p>
+<h3 id="Input-Specification"><a href="#Input-Specification" class="headerlink" title="Input Specification:"></a>Input Specification:</h3><p>The first line contains one integer <em>n</em> (1≤<em>n</em>≤10) which is the number of queries. Then <em>n</em> lines follow, each line contains two integers <em>a</em> and <em>b</em> (1≤<em>a</em>≤<em>b</em>≤$9∗10^{18}$)</p>
+<h3 id="Output-Specification"><a href="#Output-Specification" class="headerlink" title="Output Specification:"></a>Output Specification:</h3><p>Your answer should contains t numbers - answers to the queries, one number per line which is the number of powerful numbers for each given interval [a, b].</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input:"></a>Sample Input:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2</span><br><span class="line">1 9</span><br><span class="line">12 15</span><br></pre></td></tr></table></figure>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output:"></a>Sample Output:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">9</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+<p>思路：利用与lcm（1,2,3,4,5,6,7,8,9）取模与离散化消除大数存储的障碍，通过数位dp求解答案。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/07/21/powerful-numbers-by%E5%88%98%E4%B8%B0%E7%9D%BF/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/19/Prince-and-Princess-by%E5%88%98%E4%B8%B0%E7%9D%BF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1272,456 +1726,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/16/%E5%BC%A0%E8%80%81%E5%B8%88%E5%92%8C%E8%8F%9C%E5%93%AD%E6%AD%A6%E5%BE%B7%E6%B8%B8%E6%88%8F-by%E6%B1%9F%E6%A5%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="TLE Assassin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TLE Assassinのblogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/16/%E5%BC%A0%E8%80%81%E5%B8%88%E5%92%8C%E8%8F%9C%E5%93%AD%E6%AD%A6%E5%BE%B7%E6%B8%B8%E6%88%8F-by%E6%B1%9F%E6%A5%A0/" itemprop="url">张老师和菜哭武德游戏 by江楠</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-16T09:48:14+08:00">
-                2020-05-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/05/16/%E5%BC%A0%E8%80%81%E5%B8%88%E5%92%8C%E8%8F%9C%E5%93%AD%E6%AD%A6%E5%BE%B7%E6%B8%B8%E6%88%8F-by%E6%B1%9F%E6%A5%A0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2020/05/16/张老师和菜哭武德游戏-by江楠/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2020/05/16/%E5%BC%A0%E8%80%81%E5%B8%88%E5%92%8C%E8%8F%9C%E5%93%AD%E6%AD%A6%E5%BE%B7%E6%B8%B8%E6%88%8F-by%E6%B1%9F%E6%A5%A0/" class="leancloud_visitors" data-flag-title="张老师和菜哭武德游戏 by江楠">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="A-张老师和菜哭武的游戏（数学）"><a href="#A-张老师和菜哭武的游戏（数学）" class="headerlink" title="A 张老师和菜哭武的游戏（数学）"></a>A 张老师和菜哭武的游戏（数学）</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>天才程序员菜哭武和张老师有一天到一个城市旅游，旅途中菜哭武觉得无聊就想和张老师玩一个游戏。菜哭武有n个石子，每个石子都标有1到n之间到数，且各不相同，一开始他们会随机从这堆石子选一个石子放置到一个集合中，张老师选的数是a，菜哭武选的是b（a和b不相同）。接下来菜哭武和张老师轮流按照如下规则拿走一个石子：当石子x能被拿走时，当且仅当集合存在y和z，满足x等于y+z或者y-z，当x被拿走时，把它放到集合中。谁完成最后一轮操作时，谁获胜。张老师总是先手，于是张老师就好奇当决定好a和b时，他是否总是能获胜，你能帮助一下张老师吗？</p>
-<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h3><p>第一行一个整数T（1≤T≤500），表示共有T组测试数据。<br>对于每组测试数据，第一行三个整数$n(2≤n≤20000)、a和b(1≤a,b≤n, a≠b)$。</p>
-<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h3><p>若张老师能获胜输出Yes，反之No。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/16/%E5%BC%A0%E8%80%81%E5%B8%88%E5%92%8C%E8%8F%9C%E5%93%AD%E6%AD%A6%E5%BE%B7%E6%B8%B8%E6%88%8F-by%E6%B1%9F%E6%A5%A0/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/16/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97-by%E6%B1%9F%E6%A5%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="TLE Assassin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TLE Assassinのblogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/16/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97-by%E6%B1%9F%E6%A5%A0/" itemprop="url">伤害计算 by江楠</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-16T09:42:29+08:00">
-                2020-05-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/05/16/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97-by%E6%B1%9F%E6%A5%A0/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2020/05/16/伤害计算-by江楠/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2020/05/16/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97-by%E6%B1%9F%E6%A5%A0/" class="leancloud_visitors" data-flag-title="伤害计算 by江楠">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="B-伤害计算"><a href="#B-伤害计算" class="headerlink" title="B 伤害计算"></a>B 伤害计算</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>勇士菜哭武获得了一把新的武器，武器有特殊的伤害计算方式。武器的伤害计算方式由若干个部分的和组成,用+号连接。每一部分可以是一个整数a，或者是一个公式ndx。其中a表示固定伤害a点；ndx表示掷n个x面骰子，伤害是所有骰子点数的和。总伤害是每一部分伤害的和。</p>
-<p>比如2d6+1d70+3，表示掷两个6面骰子和一个70面骰子（不一定实际存在70面骰子，可以理解成1到70当中随机选择一个整数），再加上固定伤害3点。</p>
-<p>他正准备挑选一把好武器，需要计算新武器的伤害期望值，想让你帮他计算一下。</p>
-<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h3><p>输入一个字符串，表示伤害计算公式。字符串长度不超过5000，对于每一个部分，$1≤a, n, x≤1000。a,n,x$都是整数。 </p>
-<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h3><p>输出一个数，表示伤害的期望值。如果不是整数，小数点后位数保留最少，即最终结果只有可能是整数或者小数点后是.5的形式，如果不是整数，那么保留一位小数。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/16/%E4%BC%A4%E5%AE%B3%E8%AE%A1%E7%AE%97-by%E6%B1%9F%E6%A5%A0/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/13/%E8%BD%A6%E8%BE%86%E8%B0%83%E5%BA%A6-by%E6%BB%95%E7%BF%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="TLE Assassin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TLE Assassinのblogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/05/13/%E8%BD%A6%E8%BE%86%E8%B0%83%E5%BA%A6-by%E6%BB%95%E7%BF%A1/" itemprop="url">车辆调度 by滕翡</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-05-13T15:36:51+08:00">
-                2020-05-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2020/05/13/%E8%BD%A6%E8%BE%86%E8%B0%83%E5%BA%A6-by%E6%BB%95%E7%BF%A1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2020/05/13/车辆调度-by滕翡/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2020/05/13/%E8%BD%A6%E8%BE%86%E8%B0%83%E5%BA%A6-by%E6%BB%95%E7%BF%A1/" class="leancloud_visitors" data-flag-title="车辆调度 by滕翡">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="D-车辆调度"><a href="#D-车辆调度" class="headerlink" title="D 车辆调度"></a>D 车辆调度</h2><p><strong>题目描述</strong><br>张老师设计了一个智能调度系统来控制他的遥控车队，今天，他带着他的车队来到黄渡理工大学的一块空地上测试这个系统。<br>这块空地可以描述为一个 w * h 大小的长方形，广场上有一些障碍物，几个目标点，当然，还有张老师的车队。<br>每分钟，调度系统会智能地向其中的一辆遥控车发送以下指令的其中一条：</p>
-<p>向北走，直到撞到空地的边界、障碍物或其他遥控车；</p>
-<p>向南走，直到撞到空地的边界、障碍物或其他遥控车；</p>
-<p>向西走，直到撞到空地的边界、障碍物或其他遥控车；</p>
-<p>向东走，直到撞到空地的边界、障碍物或其他遥控车；</p>
-<p>每条指令都会在一分钟之内完成，也就是说，空地上最多只有一辆遥控车在运动。此外，当遥控车无法向相应的方向移动时，它会停在原地。</p>
-<p>你想知道，在第 k 分钟时，有没有可能有任意一辆遥控车处在任意一个目标点上。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/05/13/%E8%BD%A6%E8%BE%86%E8%B0%83%E5%BA%A6-by%E6%BB%95%E7%BF%A1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1772,7 +1776,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1785,7 +1789,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
